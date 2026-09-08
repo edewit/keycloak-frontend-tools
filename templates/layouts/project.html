@@ -1,0 +1,47 @@
+---
+layout: default
+---
+{@io.quarkiverse.roq.frontmatter.runtime.model.DocumentPage page}
+{@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
+
+<article class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+  <a href="/#projects" class="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-sky-400 transition-colors mb-8">
+    <span aria-hidden="true">←</span> All projects
+  </a>
+
+  <header class="space-y-4 mb-10">
+    <p class="text-sm font-medium uppercase tracking-wider text-sky-400">{=page.data.tagline}</p>
+    <h1 class="text-4xl sm:text-5xl font-bold text-white tracking-tight">{=page.data.name}</h1>
+    <p class="text-lg text-slate-400 leading-relaxed max-w-2xl">{=page.data.summary}</p>
+    <div class="flex flex-wrap gap-3 pt-2">
+      <a href="{=page.data.github}" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 rounded-lg bg-white text-slate-900 px-4 py-2.5 text-sm font-medium hover:bg-slate-100 transition-colors">
+        View on GitHub
+      </a>
+      {#if page.data.install}
+      <code class="inline-flex items-center rounded-lg border border-slate-700 bg-slate-900 px-4 py-2.5 text-sm text-slate-300 font-mono">{=page.data.install}</code>
+      {/if}
+    </div>
+  </header>
+
+  <div class="grid sm:grid-cols-3 gap-4 mb-12">
+    {#for highlight in page.data.highlights}
+    <div class="rounded-xl border border-slate-800 bg-slate-900/50 p-5">
+      <h2 class="font-semibold text-white mb-2">{=highlight.title}</h2>
+      <p class="text-sm text-slate-400 leading-relaxed">{=highlight.body}</p>
+    </div>
+    {/for}
+  </div>
+
+  <section class="rounded-xl border border-slate-800 bg-slate-900/30 p-6 sm:p-8">
+    <h2 class="text-lg font-semibold text-white mb-4">Features</h2>
+    <ul class="grid sm:grid-cols-2 gap-3">
+      {#for feature in page.data.features}
+      <li class="flex items-start gap-3 text-sm text-slate-300">
+        <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-400" aria-hidden="true"></span>
+        <span>{=feature}</span>
+      </li>
+      {/for}
+    </ul>
+  </section>
+</article>

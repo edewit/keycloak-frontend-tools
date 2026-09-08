@@ -1,0 +1,86 @@
+- id: keycloak-headless
+  name: keycloak-headless
+  tagline: Better Auth–style DX for Keycloak SPAs
+  summary: Lit web components and framework helpers for React, Vue, Svelte, and Solid — native UI control without redirects.
+  github: https://github.com/edewit/keycloak-headless
+  npm: keycloak-headless
+  install: npm install keycloak-headless oidc-spa
+  accent: sky
+  features:
+    - Web components and framework bindings (React, Vue, Svelte, Solid)
+    - Shared auth state via Lit context — no prop drilling
+    - Typed realm roles with Vite plugin code generation
+    - CLI scaffolds a working SPA with local Keycloak
+    - Built on oidc-spa for standards-compliant OIDC flows
+  highlights:
+    - title: Native UI control
+      body: Login buttons, user menus, and role-gated content live inside your app — no redirect to a separate login page.
+    - title: Framework-agnostic
+      body: Use the same kc-* web components everywhere, with thin helpers for your framework of choice.
+    - title: Type-safe roles
+      body: Export realm roles from Keycloak and get IDE autocomplete for permission checks.
+
+- id: keycloak-react
+  name: keycloak-react
+  tagline: Clerk-style React auth for Next.js
+  summary: React components for Keycloak with SSR support — built on Auth.js so tokens stay server-side and never reach the browser.
+  github: https://github.com/edewit/keycloak-react
+  npm: keycloak-react
+  install: npm install keycloak-react next-auth
+  accent: rose
+  features:
+    - SSR-first authentication using Auth.js with Keycloak provider
+    - Pre-built UI components — user avatar, sign-in/out buttons, user menu
+    - SignedIn, SignedOut, and Protect conditional rendering components
+    - Server-side session and token management with automatic refresh
+    - Role-based access control via useHasRole and Protect
+  highlights:
+    - title: Tokens stay server-side
+      body: Access and refresh tokens live in HTTP-only cookies and the JWT — the client only sees session info, never raw tokens.
+    - title: Clerk-inspired DX
+      body: Drop-in React components for sign-in flows, user menus, and role-gated content in Next.js App Router apps.
+    - title: Auth.js under the hood
+      body: Built on NextAuth v5 with a Keycloak provider — familiar patterns with enterprise-grade identity behind them.
+
+- id: login-ui-base
+  name: login-ui-base
+  tagline: Modern login themes without Freemarker pain
+  summary: A reusable foundation for customizing Keycloak login UIs with client-side rendering or Quarkus Qute server-side templates.
+  github: https://github.com/edewit/login-ui-base
+  npm: "@edewit/login-ui-base"
+  install: npm install @edewit/login-ui-base
+  accent: violet
+  features:
+    - FreeMarker base theme serializes context to JSON for Vue, Alpine, plain HTML/JS
+    - Quarkus Qute theme for fully server-rendered login pages
+    - QuteLoginFormsProvider SPI — set templateEngine=qute on any theme
+    - CLI scaffolds child themes with live reload
+    - Embedded HTML templates or custom js/main.js entry points
+  highlights:
+    - title: Two rendering modes
+      body: Choose client-side UI with login-ui-base or server-side Qute with login-ui-qute — same Keycloak, your stack.
+    - title: CLI scaffolding
+      body: npx @edewit/login-ui-base create-login-theme generates a child theme ready for local development.
+    - title: No more .ftl wrestling
+      body: Override login pages with HTML and Qute syntax instead of fighting Freemarker templates.
+
+- id: backend-for-frontend
+  name: Backend-for-Frontend
+  tagline: Secure BFF auth layer as a Keycloak extension
+  summary: A Keycloak realm resource provider that keeps tokens server-side, issues BFF_SESSION cookies, and proxies backend calls.
+  github: https://github.com/edewit/Backend-for-Frontend
+  install: mvn clean package && cp target/*.jar $KEYCLOAK_HOME/providers/
+  accent: emerald
+  features:
+    - BFF_SESSION HttpOnly cookie — browser never holds access or refresh tokens
+    - Login, OTP, session check, logout, and backend proxy endpoints
+    - CSRF validation on browser POST routes via Origin/Referer checks
+    - Automatic token refresh before downstream API calls
+    - Demo stack with docker compose
+  highlights:
+    - title: Tokens stay server-side
+      body: Access and refresh tokens live in the BFF layer, not in localStorage or JavaScript-accessible cookies.
+    - title: Drop-in Keycloak extension
+      body: Deploy as a JAR to providers/, rebuild Keycloak, and call /realms/{realm}/bff/* from your SPA.
+    - title: Built for SPAs
+      body: POST /bff/backend/call forwards authenticated requests to downstream APIs with bearer tokens attached.

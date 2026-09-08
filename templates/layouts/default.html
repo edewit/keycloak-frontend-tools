@@ -1,0 +1,35 @@
+---
+theme-layout: default
+---
+{@io.quarkiverse.roq.frontmatter.runtime.model.Page page}
+{@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
+
+<div class="min-h-screen flex flex-col bg-slate-950 text-slate-100">
+  <header class="border-b border-slate-800/80 backdrop-blur-sm sticky top-0 z-50 bg-slate-950/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+      <a href="/" class="flex items-center gap-3 group">
+        <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-sky-500 to-violet-600 text-sm font-bold shadow-lg shadow-sky-500/20">KC</span>
+        <span class="font-semibold text-white group-hover:text-sky-300 transition-colors">{=site.title}</span>
+      </a>
+      <nav class="flex items-center gap-1 sm:gap-2 text-sm">
+        <a href="/#projects" class="px-3 py-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors">Projects</a>
+        <a href="/#why" class="px-3 py-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors">Why</a>
+        <a href="https://github.com/edewit" target="_blank" rel="noopener" class="px-3 py-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    {#insert /}
+  </main>
+
+  <footer class="border-t border-slate-800 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+      <p>Built by <a href="https://github.com/edewit" class="text-slate-300 hover:text-sky-400 transition-colors">Erik Jan de Wit</a></p>
+      <div class="flex items-center gap-4">
+        <a href="https://blog.nerdin.ch" class="hover:text-sky-400 transition-colors">blog.nerdin.ch</a>
+        <a href="https://iamroq.dev" class="hover:text-sky-400 transition-colors">Powered by Roq</a>
+      </div>
+    </div>
+  </footer>
+</div>
