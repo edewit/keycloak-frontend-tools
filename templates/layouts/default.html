@@ -12,7 +12,7 @@ theme-layout: default
     <div
       class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4"
     >
-      <a href="/" class="flex items-center gap-3 group">
+      <a href="{=site.url}" class="flex items-center gap-3 group">
         <span
           class="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-sky-500 to-violet-600 text-sm font-bold shadow-lg shadow-sky-500/20"
           >KC</span
@@ -24,14 +24,19 @@ theme-layout: default
       </a>
       <nav class="flex items-center gap-1 sm:gap-2 text-sm">
         <a
-          href="#projects"
+          href="{=site.url}#projects"
           class="px-3 py-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors"
           >Projects</a
         >
         <a
-          href="#why"
+          href="{=site.url}#why"
           class="px-3 py-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors"
           >Why</a
+        >
+        <a
+          href="{=site.url('/blog/')}"
+          class="px-3 py-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors"
+          >Blog</a
         >
         <a
           href="https://github.com/edewit"
