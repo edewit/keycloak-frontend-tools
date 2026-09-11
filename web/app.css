@@ -2,8 +2,48 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
+  /* Rosé Pine — Main variant (https://rosepinetheme.com) */
+  --color-rp-base: #191724;
+  --color-rp-surface: #1f1d2e;
+  --color-rp-overlay: #26233a;
+  --color-rp-muted: #6e6a86;
+  --color-rp-subtle: #908caa;
+  --color-rp-text: #e0def4;
+  --color-rp-love: #eb6f92;
+  --color-rp-gold: #f6c177;
+  --color-rp-rose: #ebbcba;
+  --color-rp-pine: #31748f;
+  --color-rp-foam: #9ccfd8;
+  --color-rp-iris: #c4a7e7;
+  --color-rp-highlight-low: #21202e;
+  --color-rp-highlight-med: #403d52;
+  --color-rp-highlight-high: #524f67;
+
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: ui-monospace, "Cascadia Code", "Fira Code", monospace;
+
+  /* Remap Tailwind palettes to Rosé Pine */
+  --color-slate-50: #faf4ff;
+  --color-slate-100: #e0def4;
+  --color-slate-200: #c4a4c0;
+  --color-slate-300: #b4b0ca;
+  --color-slate-400: #908caa;
+  --color-slate-500: #6e6a86;
+  --color-slate-600: #524f67;
+  --color-slate-700: #403d52;
+  --color-slate-800: #26233a;
+  --color-slate-900: #1f1d2e;
+  --color-slate-950: #191724;
+
+  --color-sky-300: #ebbcba;
+  --color-sky-400: #9ccfd8;
+  --color-sky-500: #c4a7e7;
+
+  --color-violet-400: #c4a7e7;
+  --color-violet-600: #907aa9;
+
+  --color-red-300: #f0a0b8;
+  --color-red-500: #eb6f92;
 }
 
 html {
@@ -16,8 +56,8 @@ body {
 
 .hero-glow {
   background:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.15), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 0%, rgba(139, 92, 246, 0.1), transparent);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(156, 207, 216, 0.15), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 0%, rgba(196, 167, 231, 0.12), transparent);
 }
 
 .project-card {
@@ -26,5 +66,24 @@ body {
 
 .project-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 20px 40px -20px rgba(56, 189, 248, 0.15);
+  box-shadow: 0 20px 40px -20px rgba(196, 167, 231, 0.2);
+}
+
+.prose-invert {
+  --tw-prose-body: var(--color-rp-subtle);
+  --tw-prose-headings: var(--color-rp-text);
+  --tw-prose-lead: var(--color-rp-subtle);
+  --tw-prose-links: var(--color-rp-foam);
+  --tw-prose-bold: var(--color-rp-text);
+  --tw-prose-counters: var(--color-rp-muted);
+  --tw-prose-bullets: var(--color-rp-highlight-med);
+  --tw-prose-hr: var(--color-rp-overlay);
+  --tw-prose-quotes: var(--color-rp-subtle);
+  --tw-prose-quote-borders: var(--color-rp-iris);
+  --tw-prose-captions: var(--color-rp-muted);
+  --tw-prose-code: var(--color-rp-rose);
+  --tw-prose-pre-code: var(--color-rp-text);
+  --tw-prose-pre-bg: var(--color-rp-surface);
+  --tw-prose-th-borders: var(--color-rp-highlight-med);
+  --tw-prose-td-borders: var(--color-rp-overlay);
 }
