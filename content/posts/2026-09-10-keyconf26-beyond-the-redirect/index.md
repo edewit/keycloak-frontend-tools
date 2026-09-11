@@ -10,9 +10,9 @@ date: 2026-09-10
 
 [KeyConf26](https://keyconf.dev/) is the annual one-day conference dedicated to the Keycloak community — and this year I'm on the main stage in Prague.
 
-**When:** Thursday, October 8, 2026 · 9:00–18:00
-**Where:** Holiday Inn Prague Na Pankráci, Czech Republic
-**My talk:** 16:15–16:45, Main Room - Castle Hall
+- **When:** Thursday, October 8, 2026 · 9:00–18:00
+- **Where:** Holiday Inn Prague Na Pankráci, Czech Republic
+- **My talk:** 16:15–16:45, Main Room - Castle Hall
 
 ## Beyond the Redirect: Modernizing Keycloak for the TypeScript Era
 
@@ -37,4 +37,3 @@ If you're building with Keycloak on the frontend, or wrestling with Freemarker t
 [**Get your ticket at keyconf.dev →**](https://keyconf.dev/)
 
 Hope to see you in Prague!
-
