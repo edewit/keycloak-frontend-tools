@@ -18,33 +18,47 @@ theme-layout: default
           >KC</span
         >
         <span
-          class="font-semibold text-white group-hover:text-sky-300 transition-colors"
+          class="font-semibold text-rp-text group-hover:text-sky-300 transition-colors"
           >{=site.title}</span
         >
       </a>
       <nav class="flex items-center gap-1 sm:gap-2 text-sm">
         <a
           href="{=site.url}#projects"
-          class="px-3 py-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors"
+          class="px-3 py-2 rounded-md text-slate-400 hover:text-rp-text hover:bg-slate-800/60 transition-colors"
           >Projects</a
         >
         <a
           href="{=site.url}#why"
-          class="px-3 py-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors"
+          class="px-3 py-2 rounded-md text-slate-400 hover:text-rp-text hover:bg-slate-800/60 transition-colors"
           >Why</a
         >
         <a
           href="{=site.url('/blog/')}"
-          class="px-3 py-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors"
+          class="px-3 py-2 rounded-md text-slate-400 hover:text-rp-text hover:bg-slate-800/60 transition-colors"
           >Blog</a
         >
         <a
           href="https://github.com/edewit"
           target="_blank"
           rel="noopener"
-          class="px-3 py-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors"
+          class="px-3 py-2 rounded-md text-slate-400 hover:text-rp-text hover:bg-slate-800/60 transition-colors"
           >GitHub</a
         >
+        <button
+          type="button"
+          onclick="toggleRpTheme()"
+          class="theme-toggle ml-1 p-2 rounded-md text-slate-400 hover:text-rp-text hover:bg-slate-800/60 transition-colors"
+          aria-label="Toggle light and dark theme"
+        >
+          <svg class="icon-sun h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+          </svg>
+          <svg class="icon-moon h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+        </button>
       </nav>
     </div>
   </header>
